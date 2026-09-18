@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="A stylish Hello World page." />
-    <title>Hello, World!</title>
+    <title>Hello, This is Shiju</title>
     <style>
       :root {
         color-scheme: dark;
@@ -104,14 +104,31 @@
       @keyframes drift { to { transform: translate(8rem, 5rem) scale(1.18); } }
 
       @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; } }
+      .site-header { position: fixed; top: 1.25rem; left: 50%; z-index: 1; width: min(92vw, 720px); display: flex; align-items: center; justify-content: space-between; transform: translateX(-50%); }
+      .brand { color: var(--ink); font-size: 1.25rem; font-weight: 800; letter-spacing: -0.06em; text-decoration: none; }
+      .brand span { color: var(--cyan); }
+      nav { display: flex; gap: 0.2rem; }
+      nav a { padding: 0.45rem 0.7rem; border-radius: 99px; color: var(--muted); font-size: 0.9rem; font-weight: 700; text-decoration: none; }
+      nav a:hover, nav .active { color: var(--ink); background: rgba(255,255,255,0.12); }
+      .text-link { display: inline-block; margin: 1.3rem 0 0; color: var(--cyan); font-weight: 800; text-decoration: none; }
+      .text-link:hover { text-decoration: underline; }
     </style>
   </head>
   <body>
+    <header class="site-header">
+      <a class="brand" href="index.html">Shiju<span>.</span></a>
+      <nav aria-label="Main navigation">
+        <a class="active" href="index.html" aria-current="page">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
     <main>
       <div class="eyebrow"><span class="spark"></span> Your new beginning</div>
       <h1>Hello, World!</h1>
       <p>A small greeting with a little bit of magic. This is where great ideas start taking shape.</p>
       <button type="button" id="greet-button">Say hello back</button>
+      <a class="text-link" href="about.html">Get to know me &rarr;</a>
     </main>
 
     <script>
